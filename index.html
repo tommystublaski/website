@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One Page Scroll</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        .wrapper {
+            width: 1180px;
+            height: 5000px;
+            background-color: beige;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .thenook {
+            font-family: "Big John";
+            color: #fbe99f;
+            background-color: #190f3c;
+            height: 321px;
+            width: 1180px;
+            text-align: center;
+            padding-top: 98px;
+            font-size: 141px;
+        }
+
+        nav {
+            width: 1180px;
+            height: 80px;
+            background-color: #190f3c;
+            margin: 0 auto;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #2d2d74;
+            cursor: hand;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        #barbra {
+            width: 1180px;
+            height: 600px;
+            background-color: #f05f81;
+            color: white;
+            text-align: center;
+        }
+
+        #home {
+            width: 1180px;
+            height: 800px;
+            background-color: red;
+            color: white;
+        }
+
+        #menu {
+            width: 1180px;
+            height: 1500px;
+            background-color: indianred;
+        }
+
+        #events {
+            width: 1180px;
+            height: 800px;
+            background-color: orange;
+        }
+
+        #ddd {
+            width: 1180px;
+            height: 600px;
+            background-color: green;
+        }
+
+        #photos {
+            width: 1180px;
+            height: 800px;
+            background-color: yellow;
+        }
+
+        #contact {
+            width: 1180px;
+            height: 800px;
+            background-color: blue;
+        }
+
+
+        p {
+            display: inline;
+            padding: 0 50px;
+            font-family: Poppins;
+            font-size: 25px;
+        }
+
+        footer {
+            width: 1180px;
+            height: 100px;
+            background-color: #190f3c;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            padding-top: 35px;
+        }
+
+
+
+
+    </style>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+
+<div id="top"></div>
+<div class="wrapper">
+
+    <div class="thenook"> The Nook </div>
+
+    <nav>
+        <a href="#home"><p id="nav-home"><b>HOME</b></p></a>
+        <a href="#menu"><p id="nav-menu"><b>MENU</b></p></a>
+        <a href="#events"><p id="nav-events"><b>EVENTS</b></p></a>
+        <a href="#photos"><p id="nav-photos"><b>PHOTOS</b></p></a>
+        <a href="#contact"><p id="nav-contact"><b>CONTACT</b></p></a>
+    </nav>
+
+    <div id="barbra"></div>
+    <div id="home"><p>Home</p></div>
+    <div id="menu"><p>Menu</p></div>
+    <div id="events"><p>Events</p></div>
+    <div id="ddd"></div>
+    <div id="photos"><p>Photos</p></div>
+    <div id="contact"><p>Contact</p></div>
+
+
+
+
+
+
+
+
+    <a href="#top"><footer><p>Back to top</p></footer></a>
+
+</div><!-- end of div wrapper-->
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+</body>
+</html>
